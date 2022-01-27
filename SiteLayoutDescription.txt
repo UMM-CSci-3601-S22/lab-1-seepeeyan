@@ -1,0 +1,5 @@
+Navbar: Big screen -> left side, Small screen -> top
+Main Heading: Top, doesn't move
+Software Toolkit Section: Big screen -> right side moves with scroll, small screen -> bottom section
+PSLO and Req Courses and Validation: Up and down scroll/traditional
+Faculty: Big screen -> side image side info, Small screen -> layered
