@@ -141,13 +141,6 @@ img.pic {
   background-color: rgb(182, 181, 181);
 }
 
-.local {
-}
-
-.cloud{
-  /*list-style-image: linear-gradient(to left bottom, yellow, blue);*/
-}
-
 .version-control a{
   color: maroon;
 }
