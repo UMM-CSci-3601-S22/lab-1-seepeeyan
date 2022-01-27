@@ -185,7 +185,17 @@ ul > .cloud {
   margin: 0;
 	padding: 2% 10%;
 	list-style: none;
-	background-image: url("https://www.goodcloudstorage.net/wp-content/uploads/2020/04/iCloud-logo.jpg");
+	background-image: url("https://customcodefactory.com/wp-content/uploads/2019/11/cloud-png-icon-0.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
+}
+
+ul > .local {
+  margin: 0;
+	padding: 2% 10%;
+	list-style: none;
+	background-image: url("https://pluspng.com/img-png/folder-png-folder-icon-1600.png");
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-size: 20px;
