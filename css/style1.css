@@ -138,47 +138,29 @@ img.pic {
 }
 
 #toolkit{
-  background-color: sienna;
+  background-color: white;
 }
 
 .local {
-  color: red;
-  list-style-image: linear-gradient(to right top, red, yellow);
 }
 
-.cloud {
-  list-style-image: linear-gradient(to left bottom, yellow, blue);
+.cloud{
+  /*list-style-image: linear-gradient(to left bottom, yellow, blue);*/
 }
 
-.cloud::after {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+.version-control li a{
+  display: block;
+  color: maroon;
+  text-align: center;
 }
 
-.cloud::after{
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f7e5";
-}
-
-.version-control{
-  outline: 1px dotted rgb(255, 103, 255);
-  font: 15px Arial, sans-serif; /*Doesn't seem to effect the link font */
-}
-
-@keyframes colorful{
-  from{outline-color: yellow;}
-  to {outline-color: rgb(255, 153, 0);}
-}
-.ide {
-  outline: 1px solid yellow;
-  animation: colorful 1s infinite;
-  animation-direction: alternate;
+.ide li a{
+  display: block;
+  color: maroon;
+  text-align: center;
 }
 
 .testing {
-  outline: 1px dashed lime;
 }
 
 ul > .cloud {
