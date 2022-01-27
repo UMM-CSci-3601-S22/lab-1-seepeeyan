@@ -136,3 +136,13 @@ img.pic {
   background-color: #d5d6d2;
   padding: 25px;
 }
+
+ul > .cloud {
+  margin: 0;
+	padding: 2% 10%;
+	list-style: none;
+	background-image: url("https://www.goodcloudstorage.net/wp-content/uploads/2020/04/iCloud-logo.jpg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
+}
