@@ -138,7 +138,7 @@ img.pic {
 }
 
 #toolkit{
-  background-color: white;
+  background-color: rgb(182, 181, 181);
 }
 
 .local {
@@ -148,19 +148,16 @@ img.pic {
   /*list-style-image: linear-gradient(to left bottom, yellow, blue);*/
 }
 
-.version-control li a{
-  display: block;
+.version-control a{
   color: maroon;
-  text-align: center;
 }
 
-.ide li a{
-  display: block;
-  color: maroon;
-  text-align: center;
+.ide a{
+  color: black;
 }
 
-.testing {
+.testing a{
+  color: gold;
 }
 
 ul > .cloud {
