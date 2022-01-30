@@ -6,6 +6,7 @@ use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 */
 
+/* style bar code referenced from here: https://www.freecodecamp.org/news/fixed-side-and-bottom-navbar-with-css-flexbox/ */
 body {
   overflow: hidden;
     height: 100vh;
@@ -54,7 +55,7 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
   font-weight: 500;
 
   overflow: hidden;
-  background: linear-gradient(to left, white, white 50%, silver 50%);
+  background: linear-gradient(to right, white, white 50%, silver 50%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -154,6 +155,16 @@ padding-bottom: 10px;
     font-size: 24px;
   }
 
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  #faculty-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   #style-selector {
     position: fixed;
     background-color: #7a0019;
@@ -186,8 +197,3 @@ padding-bottom: 10px;
     flex-direction: row;
     max-width: 53em;
   }
-
-  #toolkit-section {
-
-  }
-}
