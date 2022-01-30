@@ -138,19 +138,19 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 
 @media screen and (max-width: 500px) {
   body {
-    padding: 0 20px;
+    padding: 40px 20px 0 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
   #style-selector {
-    position: absolute;
+    position: fixed;
     background-color: #7a0019;
     width: 100%;
     left: 0;
     right: 0;
     top: 0;
-    height: 46px;
+    height: 40px;
     padding-top: 10px;
   }
 
