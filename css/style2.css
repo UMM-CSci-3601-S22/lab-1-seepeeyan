@@ -6,16 +6,8 @@ use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 */
 
-@media screen and (min-width: 925px) {
-  .pslo-courses-container {
-    display: flex;
-    flex-direction: row;
-    max-width: 53em;
-  }
-}
-
 body {
-  padding: 0 20% 0 10%;
+  padding: 0 50px 0 150px;
   background-color: #ffffff;
 }
 
@@ -90,7 +82,7 @@ a {
 /* code snippet comes from: https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
 #style-selector {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 10%; /* Set the width of the sidebar */
+  width: 120px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -142,4 +134,50 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 /* validation box */
 #validation {
 
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #style-selector {
+    position: absolute;
+    background-color: #7a0019;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 46px;
+    padding-top: 10px;
+  }
+
+  #style-selector ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgray;
+  }
+
+  #style-selector li {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 925px) {
+  .pslo-courses-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 53em;
+  }
+
+  #toolkit-section {
+
+  }
 }
