@@ -7,124 +7,20 @@ use float to make something locate itself on the right or left
 */
 
 body {
-  padding: 0 30px 0 150px;
-  background-color: #ffffff;
-  display: flex; /* this is the flexbox model. It adds responsive design to its items */
-  flex-direction: column; /* this says how the flex items will align (e.g. 'row') */
-  align-items: center; /* These next two properties center the flex items */
-  justify-content: center;
+  overflow: hidden;
+    height: 100vh;
 }
 
-#main-title {
-  text-align: center;
-  padding-bottom: 10px;
+main {
+  overflow-y: auto;
 }
 
-h2 {
-  text-align: center;
-}
-
-/* General box design */
-.section {
-
-}
-
-.local {
-
-}
-
-.cloud {
-
-}
-
-.version-control {
-
-}
-
-.testing {
-
-}
-
-#vscode {
-
-}
-
-/* Required courses div */
-#courses {
-
-}
-
-/* pslo box */
-#pslo {
-
-}
-
-/* Office Room text */
-.office {
-
-}
-
-/* Faculty name text */
-.name {
-
-}
-
-/* Card-box scroll section */
-#faculty {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 20px 1fr 20px;
-}
-
-#faculty > * {
-  grid-column: 2 / -2;
-}
-
-/* #faculty > .full {
-  grid-column: 1 / -1;
-} */
-
-#faculty-list {
-  list-style-type: none;
-  /* display: inline-block; */
-  margin: 0;
-  padding: 0;
-}
-
-/* Referenced this site: https://www.w3schools.com/howto/howto_css_cards.asp */
-#faculty-list li {
-  /* Add shadows to create the "card" effect */
-  padding: 20px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-  margin: 10px;
-}
-
-/* On mouse-over, add a deeper shadow */
-#faculty-list li:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-
-
-/* Navbar equivalent, box containing page style links */
-/* code snippet comes from: https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
 #style-selector {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 120px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background: linear-gradient(to bottom right, black, darkslategrey 50%, black);
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  position: fixed;
   border-right: 4px solid black;
+  background: linear-gradient(to bottom right, black, darkslategrey 50%, black);
+  flex: 1 0 10%;
+  padding: 1rem;
 }
 
 #style-selector ul {
@@ -166,6 +62,89 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
   background-position: 0 100%;
 }
 
+
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.wrapper-inner {
+  width: 90%;
+  margin: 0px, auto;
+}
+
+
+#main-title {
+  text-align: center;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* General box design */
+.section {
+  padding: 0;
+  margin: 20px;
+}
+
+/* Office Room text */
+.office {
+padding-bottom: 10px;
+}
+
+/* Card-box scroll section */
+#faculty {
+  padding: 20px 0;
+  display: grid;
+  grid-gap: 20px 0;
+  grid-template-columns: 20px 1fr 20px;
+  align-content: start;
+}
+
+#faculty > * {
+  grid-column: 2 / -2;
+}
+
+#faculty > #faculty-list {
+  grid-column: 1 / -1;
+}
+
+#faculty-list {
+  list-style-type: none;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 10px repeat(4, calc(50% - 40px)) 10px;
+  grid-template-rows: minmax(150px, 1fr);
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+#faculty-list:before, #faculty-list:after {
+  content: '';
+}
+
+/* Referenced this site: https://www.w3schools.com/howto/howto_css_cards.asp */
+#faculty-list li {
+  /* Add shadows to create the "card" effect */
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin: 10px;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+#faculty-list li:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
 /* validation box */
 #validation {
 
@@ -195,9 +174,9 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 
   #style-selector ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   #style-selector li {
