@@ -7,12 +7,19 @@ use float to make something locate itself on the right or left
 */
 
 body {
-  padding: 0 50px 0 150px;
+  padding: 0 30px 0 150px;
   background-color: #ffffff;
 }
 
-#main-title {
+h1 {
+  padding-bottom: 5px;
+}
 
+#main-title {
+  text-align: center;
+  border-bottom: 5px solid black;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 h2 {
@@ -25,7 +32,11 @@ a {
 
 /* General box design */
 .section {
-
+  border-radius: 25px;
+  padding: 20px;
+  border: 5px solid;
+  margin: 10px;
+  max-width: 48em;
 }
 
 /* Faculty name text */
@@ -90,6 +101,7 @@ a {
   background-color: lightgray;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+  border-right: 4px solid black;
 }
 
 #style-selector ul {
@@ -97,7 +109,6 @@ a {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: darkgray;
 }
 
 #style-selector li {
@@ -112,15 +123,16 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 */
 #style-selector li a {
   position: relative;
-  padding: 0 10px;
+  text-align: center;
+  padding: 10px 0 10px 10px;
   display: inline-block;
-  font-size: 2em;
+  font-size: 30px;
   font-weight: 500;
   color: purple;
   overflow: hidden;
   background: linear-gradient(to right, plum, plum 50%, purple 50%);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
   background-position: 100%;
@@ -136,13 +148,17 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    padding: 40px 20px 0 20px;
-  }
+/* Software list box */
+#toolkit-section {
+
 }
 
 @media screen and (max-width: 500px) {
+  body {
+    padding: 40px 20px 0 20px;
+    font-size: 24px;
+  }
+
   #style-selector {
     position: fixed;
     background-color: #7a0019;
@@ -151,7 +167,7 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
     right: 0;
     top: 0;
     height: 40px;
-    padding-top: 10px;
+    padding: 10px 0;
   }
 
   #style-selector ul {
@@ -159,7 +175,6 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: darkgray;
   }
 
   #style-selector li {
