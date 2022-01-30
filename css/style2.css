@@ -14,15 +14,15 @@ body {
 
 main {
   overflow-y: auto;
-  padding: 20px 20px;
+  padding: 30px 30px;
 }
 
 #style-selector {
   position: fixed;
-  border-right: 4px solid black;
+  border: 4px solid black;
   background: linear-gradient(to bottom right, black, darkslategrey 50%, black);
   flex: 1 0 10%;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 #style-selector ul {
@@ -49,9 +49,9 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 #style-selector li a {
   position: relative;
   text-align: center;
-  padding: 10px 0 10px 10px;
+  padding: 0 10px;
   display: inline-block;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 500;
 
   overflow: hidden;
@@ -180,14 +180,19 @@ padding-bottom: 10px;
     list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   #style-selector li {
+    padding: 0 15px;
     float: left;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+  }
+
+  #style-selector li a {
+    font-size: 30px;
   }
 }
 
