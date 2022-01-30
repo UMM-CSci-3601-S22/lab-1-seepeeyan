@@ -9,20 +9,23 @@ use float to make something locate itself on the right or left
 /* style bar code referenced from here: https://www.freecodecamp.org/news/fixed-side-and-bottom-navbar-with-css-flexbox/ */
 body {
   overflow: hidden;
-    height: 100vh;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 main {
   overflow-y: auto;
-  padding: 30px 30px;
+  padding: 90px 0px 30px 0px;
+  justify-content: center;
 }
 
 #style-selector {
   position: fixed;
-  border: 4px solid black;
   background: linear-gradient(to bottom right, black, darkslategrey 50%, black);
   flex: 1 0 10%;
   padding: 0rem;
+  width: 100%;
 }
 
 #style-selector ul {
@@ -33,14 +36,11 @@ main {
 }
 
 #style-selector li {
+  padding: 0 10px;
   float: left;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-}
-
-#KK, #Elena, #Nic, #Peter {
-  text-align: center;
 }
 
 /* code for link color transition comes from:
@@ -49,7 +49,7 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 #style-selector li a {
   position: relative;
   text-align: center;
-  padding: 0 10px;
+  padding: 20px 10px;
   display: inline-block;
   font-size: 24px;
   font-weight: 500;
@@ -72,11 +72,12 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 .wrapper {
   display: flex;
   height: 100%;
+  justify-content: center;
 }
 
 .wrapper-inner {
   width: 90%;
-  margin: 0px, auto;
+  margin: 0 0 0 5%;
 }
 
 
@@ -98,6 +99,10 @@ h2 {
 /* Office Room text */
 .office {
 padding-bottom: 10px;
+}
+
+#KK, #Elena, #Nic, #Peter {
+  text-align: center;
 }
 
 /* Card-box scroll section */
@@ -149,42 +154,75 @@ padding-bottom: 10px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 720px) {
+  #faculty-list {
+    list-style-type: none;
+    justify-content: space-between;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 10px repeat(4, 60%) 10px;
+    grid-template-rows: minmax(150px, 1fr);
+}
+
+@media screen and (max-width: 540px) {
   body {
-    padding: 40px 20px 0 20px;
     font-size: 24px;
+    background: linear-gradient(to bottom right, grey, white 50%, grey);
+  }
+
+  #main-title {
+    padding: 0;
+  }
+
+  main {
+    justify-content: left;
+    position: relative;
+    display: inline-flex;
+    border-bottom-width: 60px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom right, black, darkslategrey 50%, black) 1;
+  }
+
+  .section {
+    margin: 0;
+  }
+
+  .wrapper-inner {
+    justify-content: center;
+    align-items: center;
+
   }
 
   .wrapper {
     flex-direction: column-reverse;
+    justify-content: center;
+
   }
 
   #faculty-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border: none;
   }
 
   #style-selector {
     position: fixed;
-    background-color: #7a0019;
     width: 100%;
     left: 0;
     right: 0;
     top: 0;
-    height: 40px;
-    padding: 10px 0;
+    height: 60px;
+    padding-bottom: 10px;
   }
 
   #style-selector ul {
     list-style-type: none;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 
   #style-selector li {
-    padding: 0 15px;
     float: left;
     display: flex;
     flex-direction: row;
@@ -194,11 +232,18 @@ padding-bottom: 10px;
   #style-selector li a {
     font-size: 30px;
   }
+
+  .pslo-courses-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
 
 @media screen and (min-width: 925px) {
   .pslo-courses-container {
     display: flex;
     flex-direction: row;
-    max-width: 53em;
+    max-width: 100%;
   }
+}
