@@ -22,10 +22,11 @@ main {
 
 #style-selector {
   position: fixed;
-  background: linear-gradient(to bottom right, black, darkslategrey 50%, black);
+  background: #1B262C;
   flex: 1 0 10%;
   padding: 0rem;
   width: 100%;
+  border-bottom: 5px solid #1B262C;
 }
 
 #style-selector ul {
@@ -91,7 +92,7 @@ h2 {
 }
 
 /* General box design */
-.section {
+.section, #validation {
   padding: 0;
   margin: 20px;
 }
@@ -162,6 +163,7 @@ padding-bottom: 10px;
     grid-gap: 10px;
     grid-template-columns: 10px repeat(4, 60%) 10px;
     grid-template-rows: minmax(150px, 1fr);
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -183,7 +185,7 @@ padding-bottom: 10px;
     border-image: linear-gradient(to bottom right, black, darkslategrey 50%, black) 1;
   }
 
-  .section {
+  .section, #validation {
     margin: 0;
   }
 
@@ -246,4 +248,52 @@ padding-bottom: 10px;
     flex-direction: row;
     max-width: 100%;
   }
+}
+
+@keyframes fade {
+  from{opacity: 25%}
+  to{opacity: 100%}
+}
+
+.section, #validation {
+  align-items: center;
+  background: #1B262C;
+  border-radius: 10px;
+}
+
+.section li, #validation li, #validation p {
+  opacity: 25%;
+  color: #BBE1FA;
+}
+
+.section h2, #validation h2 {
+  color: #BBE1FA;
+  transition: 0.3s;
+}
+
+.section:hover li, #validation:hover li, #validation:hover p {
+  transition: 1s;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  opacity: 100%;
+}
+
+#main-title:hover + div > .section li {
+  transition: 1s;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  opacity: 100%;
+}
+
+main {
+  background: #0F4C75;
+  color: #BBE1FA;
+}
+
+#main-title {
+  border: 10px solid #1B262C;
+  border-radius: 10px;
+  background: #1B262C;
 }
