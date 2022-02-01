@@ -5,7 +5,7 @@
  * use , to separate a list of things that have some shared css rule
  */
 
-body {
+ body {
   padding: 30px;
   background-color: #7a0019;
   display: flex; /* this is the flexbox model. It adds responsive design to its items */
@@ -24,6 +24,7 @@ body {
     display: flex;
     flex-direction: row;
     max-width: 53em;
+    margin: 10px auto;
   }
 }
 
@@ -38,22 +39,26 @@ h2 {
   font-family: "EB Garamond", serif;
 }
 
-.section {
+.section, #validation {
   border-radius: 25px;
   padding: 20px;
   border: 5px solid;
-  margin: 10px;
+  margin: 10px auto;
   max-width: 48em;
 }
 
 #courses {
   background-color: #ffde7a;
   font-family: "Marcellus", serif;
+  padding: 20px;
+  margin-left: 10px;
 }
 
 #pslo {
   background-color: #d5d6d2;
   font-family: "Marcellus", serif;
+  padding: 20px;
+  margin-right: 10px;
 }
 
 #faculty {
@@ -132,9 +137,45 @@ img.pic {
 }
 
 #validation {
-  font-size: 0.8rem;
+  font-family: "Marcellus", serif;
   background-color: #d5d6d2;
-  padding: 25px;
+  padding: 20px;
+}
+
+#toolkit{
+  background-color: #f9f7f6;
+}
+
+.version-control a{
+  color: maroon;
+}
+
+.ide a{
+  color: black;
+}
+
+.testing a{
+  color: gold;
+}
+
+ul > .cloud {
+  margin: 0;
+	padding: 2% 10%;
+	list-style: none;
+	background-image: url("https://customcodefactory.com/wp-content/uploads/2019/11/cloud-png-icon-0.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
+}
+
+ul > .local {
+  margin: 0;
+	padding: 2% 10%;
+	list-style: none;
+	background-image: url("https://pluspng.com/img-png/folder-png-folder-icon-1600.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px;
 }
 
 #toolkit{
