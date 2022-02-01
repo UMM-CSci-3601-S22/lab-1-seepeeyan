@@ -11,14 +11,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  /* MOST IMPORTANT LINE OF CODE- DON'T DELETE */
-  background-image: url("../assets/images/Elena.jpg");
-  /*background-image: url("https://sc.mogicons.com/l/shrek-frace-221.png");*/
-  /*background-image: url("https://emoji.gg/assets/emoji/PepeHappy.png");*/
-  /*background-image: url("https://i.imgflip.com/2/qkmiu.jpg");*/
-
-  /*background-image: url("http://sr.photos2.fotosearch.com/bthumb/CSP/CSP132/k1326006.jpg");*/
-  /*background: */
+  background: #BBE1FA;
 }
 
 main {
@@ -102,6 +95,7 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
   transition: background-position 275ms ease;
 }
 
+
 #style-selector a:hover {
   background-position: 0 100%;
 }
@@ -117,6 +111,7 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 
 .section > ul > li, .section ol > li {
   padding-top: 10px;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
 }
 
 
@@ -199,7 +194,15 @@ img.pic {
   border-radius: 5px;
 }
 
-/*
+#toolkit a, #validation a{
+  color: #3282B8;
+}
+
+#toolkit a:hover, #validation a:hover{
+  color: #BBE1FA;
+}
+
+
 @media screen and (min-width: 600px) {
   @keyframes fade {
     from{opacity: 50%}
@@ -226,7 +229,7 @@ img.pic {
     opacity: 100%;
   }
 }
-*/
+
 
 @media screen and (max-width: 760px) {
   #faculty-list {
@@ -340,4 +343,8 @@ img.pic {
   background-color: #1B262C;
   border-radius: 20px;
   border: 3px solid #3282B8;
+}
+
+.section h2, #validation h2 {
+  border: 10px solid #0F4C75;
 }
