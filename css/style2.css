@@ -64,7 +64,6 @@ h2 {
   flex: 1 0 10%;
   padding: 0rem;
   width: 100%;
-  border-bottom: 5px solid #1B262C;
 }
 
 #style-selector ul {
@@ -103,7 +102,7 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
   transition: background-position 275ms ease;
 }
 
-#style-selector li a:hover {
+#style-selector a:hover {
   background-position: 0 100%;
 }
 
@@ -131,6 +130,10 @@ li > ul:first-child, li > ol:first-child {
 
 .office {
 padding-bottom: 10px;
+}
+
+.name {
+  font-family: "Dancing Script", cursive;
 }
 
 #KK, #Elena, #Nic, #Peter {
