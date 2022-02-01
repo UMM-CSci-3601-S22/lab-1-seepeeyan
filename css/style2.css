@@ -11,6 +11,14 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  /* MOST IMPORTANT LINE OF CODE- DON'T DELETE */
+  background-image: url("../assets/images/Elena.jpg");
+  /*background-image: url("https://sc.mogicons.com/l/shrek-frace-221.png");*/
+  /*background-image: url("https://emoji.gg/assets/emoji/PepeHappy.png");*/
+  /*background-image: url("https://i.imgflip.com/2/qkmiu.jpg");*/
+
+  /*background-image: url("http://sr.photos2.fotosearch.com/bthumb/CSP/CSP132/k1326006.jpg");*/
+  /*background: */
 }
 
 main {
@@ -101,6 +109,10 @@ https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/#:~:t
 .section, #validation {
   padding: 20px;
   margin: 20px;
+  align-items: center;
+  background: #1B262C;
+  border-radius: 10px;
+  color: #BBE1FA;
 }
 
 .office {
@@ -151,7 +163,7 @@ padding-bottom: 10px;
 #faculty-list li {
   /* Add shadows to create the "card" effect */
   padding: 20px 10px;
-  box-shadow: 2px 4px 8px 4px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
   margin: 10px;
@@ -160,19 +172,12 @@ padding-bottom: 10px;
 
 /* On mouse-over, add a deeper shadow */
 #faculty-list li:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
 }
 
 img.pic {
   border: 5px solid #1B262C;
   border-radius: 5px;
-}
-
-.section, #validation {
-  align-items: center;
-  background: #1B262C;
-  border-radius: 10px;
-  color: #BBE1FA;
 }
 
 @media screen and (min-width: 600px) {
@@ -228,6 +233,15 @@ img.pic {
     border-bottom-width: 60px;
     border-style: solid;
     border-color: #1B262C;
+  }
+  .section > ul > li, .section ol > li {
+    padding-top: 20px;
+  }
+  li > ul:first-child, li > ol:first-child {
+    padding-top: 10px;
+  }
+  div > li:first-child {
+    padding-top: 20px;
   }
   .section, #validation {
     margin: 20px;
